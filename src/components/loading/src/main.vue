@@ -1,61 +1,56 @@
 <template>
-  <div>
+  <div class="mask" v-if="loading">
     <transition name="fade">
-      <div class="little-tip" v-show="showTip">
-        <img src="../../../assets/img/success.png" alt="" width="36" v-if="type=='success'">
-        <img src="../../../assets/img/fail.png" alt="" width="36" v-if="type=='fail'">
-        <img src="../../../assets/img/warning.png" alt="" width="36" v-if="type=='warning'">
-        <img src="../../../assets/img/loading.png" alt="" width="36" v-if="type=='loading'" class="loading">
-        <span>{{msg}}</span>
+      <div class="little-tip">
+        <img src="../../../assets/img/loading.png" alt class="loading">
+        <span>{{tip}}</span>
       </div>
     </transition>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'little-tip',
+  name: 'loading',
   data () {
     return {
-      showTip: true,
-      msg: '',
-      type: ''
+      loading: true,
+      tip: '正在加载'
     }
-  },
-  mounted () {
-    setTimeout(() => {
-      this.showTip = false
-    }, 1500)
   }
 }
 </script>
+
 <style lang="less" scoped>
+.mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .little-tip {
   position: fixed;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 11px 13px;
-  border-radius: 4px;
+  padding: 15px 13px;
+  border-radius: 8px;
   text-align: center;
   font-size: 16px;
-  // max-width:300px;
-  word-break: keep-all;
-  word-wrap: break-word;
-  z-index:9999;
   img {
     width: 36px;
-    margin-top: 3px;
-    margin-bottom: 3px;
   }
   span {
     text-align: center;
     display: block;
     color: #ffffff;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
+    margin-top: 5px;
   }
   &.fade-enter-active,
   &.fade-leave-active {

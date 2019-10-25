@@ -1,14 +1,21 @@
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   background-color: #F1F2F5 !important;
   color: black;
   -webkit-text-size-adjust: 100%;
 }
-.bgall{
+
+#app {
+  font-size: 16px;
+}
+
+.bgall {
   background-color: #F1F2F5 !important;
   height: 10px;
 }
+
 .tc {
   text-align: center !important;
 }
@@ -37,7 +44,7 @@ html, body {
   display: block;
 }
 
-.dib{
+.dib {
   display: inline-block;
 }
 
@@ -49,9 +56,10 @@ html, body {
   position: relative;
 }
 
-.pf{
+.pf {
   position: fixed;
 }
+
 .vm {
   vertical-align: middle;
 }
@@ -87,87 +95,56 @@ html, body {
   visibility: hidden;
 }
 
-.c1{
-  color: #1890FF !important;
+.c1 {
+  color: #597EF7 !important;
 }
 
-.c5{
+.c5 {
   color: #555555 !important;
 }
 
-.c8{
+.c8 {
   color: #888 !important;
 }
 
 .icon {
-  width: 1em; height: 1em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
 }
 
-.bb1 {
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-image: linear-gradient(0deg, #eee 50%, transparent 50%);
-}
-.bt1 {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background-image: linear-gradient(0deg, #eee 50%, transparent 50%);
-}
-.bl1 {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-image: linear-gradient(0deg, #eee 50%, transparent 50%);
-}
-.bd1 {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background-image: linear-gradient(0deg, #ddd 50%, transparent 50%);
+::-webkit-input-placeholder {
+  color: #ccc;
 }
 
-::-webkit-input-placeholder {
-  color: #888888;
-}
 :-moz-placeholder {
-  color: #888888;
+  color: #ccc;
 }
+
 ::-moz-placeholder {
-  color: #888888;
+  color: #ccc;
 }
+
 :-ms-input-placeholder {
-  color: #888888;
+  color: #ccc;
 }
-textarea{
+
+textarea {
   -webkit-appearance: none;
   resize: none;
 }
 
-.bgcf{
+.bgcf {
   background-color: #fff !important;
 }
-.bgc8{
+
+.bgc8 {
   background-color: #888 !important;
 }
 
-.mask{
+.mask {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -177,3 +154,84 @@ textarea{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.b-border {
+  position: relative;
+}
+
+.b-border:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  /* background-image: linear-gradient(0deg, transparent 50%, #d9d9d9 50%); */
+  background: #d9d9d9;
+  -webkit-transform: scaleY(0.5);
+  -ms-transform:scaleY(0.5);
+  -o-transform:scaleY(0.5);
+  -moz-transform:scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.t-border {
+  position: relative;
+}
+
+.t-border:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  /* background-image: linear-gradient(0deg, transparent 50%, #d9d9d9 50%); */
+  background: #d9d9d9;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.r-border {
+  position: relative;
+}
+
+.r-border:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  /* background-image: linear-gradient(0deg, transparent 50%, #d9d9d9 50%); */
+  background:  #d9d9d9;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.l-border {
+  position: relative;
+}
+
+.l-border:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  /* background-image: linear-gradient(0deg, transparent 50%, #d9d9d9 50%); */
+  background: #d9d9d9;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}

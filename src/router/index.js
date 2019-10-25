@@ -14,11 +14,11 @@ const router = new Router({
       }
     },
     {
-      path: '/calendar',
-      name: 'calendar',
+      path: '/list',
+      name: 'listr',
       meta: {keepAlive: false},
       component: (resolve) => {
-        require(['../views/calendar'], resolve)
+        require(['../views/list'], resolve)
       }
     },
     {
@@ -38,19 +38,11 @@ const router = new Router({
       }
     },
     {
-      path: '/sign',
-      name: 'sign',
+      path: '/form',
+      name: 'form',
       meta: {keepAlive: false},
       component: (resolve) => {
-        require(['../views/sign'], resolve)
-      }
-    },
-    {
-      path: '/statistics',
-      name: 'statistics',
-      meta: {keepAlive: false},
-      component: (resolve) => {
-        require(['../views/statistics'], resolve)
+        require(['../views/form'], resolve)
       }
     }
   ]

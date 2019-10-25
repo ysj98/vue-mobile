@@ -21,7 +21,4 @@ export default {
   height: 100%;
   position: relative;
 }
-.weui-toast{
-  background-color: rgba(0, 0, 0 ,0) !important;
-}
 </style>

@@ -90,7 +90,7 @@ table {
 
 img {
   border: none;
-  max-width: 100% !important;
+  /* max-width: 100% !important; */
   vertical-align: middle;
 }
 

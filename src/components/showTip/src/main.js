@@ -4,7 +4,7 @@ import Main from './main.vue'
 let ShowTipConstructor = Vue.extend(Main)
 
 let instance
-const showTip = function (options) {
+const toast = function (options) {
   options = options || {}
   instance = new ShowTipConstructor({
     data: options
@@ -13,4 +13,4 @@ const showTip = function (options) {
   document.body.appendChild(instance.vm.$el)
   return instance.vm
 }
-export default showTip
+export default toast
