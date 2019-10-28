@@ -4,9 +4,9 @@
       <swiper :list="imgList" v-model="activeIndex" auto :show-dots="!showDots" dots-position="center"></swiper>
     </div>
     <div class="list clearfix">
-      <div class="item fl" v-for="(item,index) in 10" :key="index">
-        <img src="../assets/img/item.png" alt="">
-        <div class="itemName">菜单名字</div>
+      <div class="item fl" v-for="(item,index) in itemList" :key="index" @click="toUrl(index)">
+        <img :src="item.icon" alt="">
+        <div class="itemName">{{item.name}}</div>
       </div>
     </div>
     <footerBar></footerBar>
@@ -23,10 +23,31 @@ export default {
       activeIndex: 0,
       showDots: false,
       imgList: [
-        { img: require('../assets/img/han1.jpg') },
-        { img: require('../assets/img/han2.jpg') },
-        { img: require('../assets/img/han3.jpg') }
+        { img: require('../assets/img/banner/banner2.jpg') },
+        { img: require('../assets/img/banner/banner1.jpg') },
+        { img: require('../assets/img/banner/banner3.jpg') }
+      ],
+      itemList: [
+        {name: '预约列表', url: '/list', icon: require('../assets/img/banner/item1.png')},
+        {name: '填写表单', url: '/form', icon: require('../assets/img/banner/item2.png')},
+        {name: '会员管理', url: '/', icon: require('../assets/img/banner/item3.png')},
+        {name: '数据统计', url: '/', icon: require('../assets/img/banner/item1.png')},
+        {name: '填写表单', url: '/', icon: require('../assets/img/banner/item2.png')},
+        {name: '会员管理', url: '/', icon: require('../assets/img/banner/item3.png')},
+        {name: '预约列表', url: '/', icon: require('../assets/img/banner/item1.png')},
+        {name: '填写表单', url: '/', icon: require('../assets/img/banner/item2.png')},
+        {name: '会员管理', url: '/', icon: require('../assets/img/banner/item3.png')},
+        {name: '预约列表', url: '/', icon: require('../assets/img/banner/item1.png')},
+        {name: '填写表单', url: '/', icon: require('../assets/img/banner/item2.png')},
+        {name: '会员管理', url: '/', icon: require('../assets/img/banner/item3.png')}
       ]
+    }
+  },
+  methods: {
+    toUrl (index) {
+      this.$router.push({
+        path: this.itemList[index].url
+      })
     }
   }
 }

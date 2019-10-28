@@ -4,19 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import { get, post } from './JS/ajax'
-import api from './JS/api'
 import utils from './JS/utils'
-import vConsole from './JS/vconsole'
-import toast from './components/showTip'
+// import vConsole from './JS/vconsole'
+import toast from './components/toast'
 import Dialog from './components/dialog'
 import Loading from './components/loading'
 
 import VueScroller from 'vue-scroller'
 
 Vue.use(VueScroller)
-Vue.use(api)
 Vue.use(utils)
-Vue.use(vConsole)
+// Vue.use(vConsole)
 
 Vue.prototype.$toast = toast
 Vue.prototype.$dialog = Dialog

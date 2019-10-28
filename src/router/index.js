@@ -8,7 +8,7 @@ const router = new Router({
     {
       path: '/',
       name: 'index',
-      meta: {keepAlive: false},
+      meta: {keepAlive: true},
       component: (resolve) => {
         require(['../views/index'], resolve)
       }
