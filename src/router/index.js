@@ -8,41 +8,17 @@ const router = new Router({
     {
       path: '/',
       name: 'index',
-      meta: {keepAlive: true},
+      meta: { keepAlive: true },
       component: (resolve) => {
         require(['../views/index'], resolve)
       }
     },
     {
-      path: '/list',
-      name: 'listr',
-      meta: {keepAlive: false},
-      component: (resolve) => {
-        require(['../views/list'], resolve)
-      }
-    },
-    {
-      path: '/mine',
-      name: 'mine',
-      meta: {keepAlive: false},
-      component: (resolve) => {
-        require(['../views/mine'], resolve)
-      }
-    },
-    {
       path: '/error',
       name: 'error',
-      meta: {keepAlive: false},
+      meta: { keepAlive: false },
       component: (resolve) => {
         require(['../views/error'], resolve)
-      }
-    },
-    {
-      path: '/form',
-      name: 'form',
-      meta: {keepAlive: false},
-      component: (resolve) => {
-        require(['../views/form'], resolve)
       }
     }
   ]
